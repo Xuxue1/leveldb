@@ -1500,9 +1500,12 @@ DB::~DB() { }
 
 Status DB::Open(const Options& options, const std::string& dbname,
                 DB** dbptr) {
-  *dbptr = nullptr;
 
+  //声明一个空指针
+  *dbptr = nullptr;
+  //创建一个数据库对象
   DBImpl* impl = new DBImpl(options, dbname);
+  //加锁
   impl->mutex_.Lock();
   VersionEdit edit;
   // Recover handles create_if_missing, error_if_exists

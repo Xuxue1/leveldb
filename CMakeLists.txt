@@ -301,6 +301,7 @@ if(LEVELDB_BUILD_TESTS)
   leveldb_test("${PROJECT_SOURCE_DIR}/util/env_test.cc")
   leveldb_test("${PROJECT_SOURCE_DIR}/util/status_test.cc")
   leveldb_test("${PROJECT_SOURCE_DIR}/util/no_destructor_test.cc")
+  leveldb_test("${PROJECT_SOURCE_DIR}/xu_test/xu_test_put.cpp")
 
   if(NOT BUILD_SHARED_LIBS)
     leveldb_test("${PROJECT_SOURCE_DIR}/db/autocompact_test.cc")
